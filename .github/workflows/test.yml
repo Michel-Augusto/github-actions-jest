@@ -1,4 +1,4 @@
-name: Run tests on pull_request
+name: Run tests on pull_request on master
 
 on:
   pull_request:
