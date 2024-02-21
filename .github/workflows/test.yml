@@ -30,6 +30,6 @@ jobs:
       - name: Check test status
         run: |
           if [ ${{ job.status }} -ne 0 ]; then
-            echo "Testes falharam. Não é possível mesclar."
+            echo "Tests failed. Can't merge."
             exit 1
           fi
