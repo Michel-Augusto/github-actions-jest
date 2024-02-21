@@ -7,4 +7,7 @@ function subtracao(a, b) {
     return a - b
 }
 
-module.exports = soma, subtracao ;
+module.exports = {
+    soma: soma,
+    subtracao: subtracao
+} ;
