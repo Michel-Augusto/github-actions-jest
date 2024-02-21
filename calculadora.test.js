@@ -8,6 +8,6 @@ test('Validação soma', () => {
 });
 
 test('Validação subtracao', () => {
-  expect(subtracao(8,4)).toBe(4);
+  expect(subtracao(8,4)).toBe(5);
   expect(subtracao(-12, -10)).toBe(-2)
 });
