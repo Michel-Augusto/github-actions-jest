@@ -7,7 +7,14 @@ try {
 
     const globalCoverage = coverageData.total.lines.pct;
 
+    if (globalCoverage < minCoverage) {
+        console.error(`Code coverage (${globalCoverage}%) is below minimum value (${minCoverage}%).`);
+        process.exit(1);
+    } else {
+        console.log(`Code coverage (${globalCoverage}%) is above minimum value (${minCoverage}%).`);
+    }
 } catch (error) {
-  console.error('Error reading coverage file:', error.message);
-  process.exit(1);
+    console.error('Error reading coverage file:', error.message);
+    process.exit(1);
 }
+
