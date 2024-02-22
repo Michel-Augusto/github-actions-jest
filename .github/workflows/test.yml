@@ -27,6 +27,15 @@ jobs:
 
       - name: Run Tests
         run: npm test
+
+      - name: Calculate Code Coverage
+        run: |
+          COVERAGE=$(node calculate_coverage.js)
+          echo "Code Coverage: $COVERAGE"
+          if [ "$COVERAGE" -lt "75" ]; then
+            echo "Code coverage is below minimum value of 75%. Can't merge."
+            exit 1
+          fi
       
       - name: Check test status
         run: |
