@@ -1,5 +1,5 @@
 
-const {soma, subtracao, multiplicacao, divisao} = require('./calculator.js') ;
+const {sum, subtraction, multiplication, division} = require('./calculator.js') ;
 
 
 test('Sum Validation', () => {
